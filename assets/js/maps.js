@@ -6,20 +6,92 @@ var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/i
 var hostnameRegexp = new RegExp('^https?://.+?/');
 
 var countries = {
+	'at': {
+		center: {lat: 47.516231, lng: 14.550072},
+		zoom: 6 
+	},
+	'cz': {
+		center: {lat: 50.083333 , lng: 14.466667},
+		zoom: 6
+	},
+	'dk': {
+		center: {lat: 56.26392, lng: 9.501785},
+		zoom: 7 
+	},
+	'fi': {
+		center: {lat: 64.92411, lng: 25.748151},
+		zoom: 5
+	},
+	'fr': {
+		center: {lat: 47, lng: 2.213749},
+		zoom: 6
+	},
 	'de': {
 		center: {lat: 51.165691, lng: 10.451526},
-		zoom: 4
+		zoom: 6
+	},
+	'gr': {
+		center: {lat: 39.074208, lng: 21.824312},
+		zoom: 6
+	},
+	'hu': {
+		center: {lat: 47.162494, lng: 19.503304},
+		zoom: 7
 	},
 	'ie': {
 		center: {lat: 53.41291, lng: -8.24389},
-		zoom: 4
+		zoom: 6
+	},
+	'is': {
+		center: {lat: 64.963051, lng: -19.020835},
+		zoom: 6
+	},
+	'it': {
+		center: {lat: 41.87194, lng: 12.56738},
+		zoom: 5
+	},
+	'nl': {
+		center: {lat: 52.132633, lng: 5.291266},
+		zoom: 7
+	},
+	'no': {
+		center: {lat: 60.472024, lng: 8.468946},
+		zoom: 5
+	},
+	'pl': {
+		center: {lat: 51.919438, lng: 19.145136},
+		zoom: 6
+	},
+	'pt': {
+		center: {lat: 39.399872, lng: -8.224454},
+		zoom: 6
+	},
+	'sk': {
+		center: {lat: 48.669026, lng: 19.699024},
+		zoom: 7
+	},
+	'es': {
+		center: {lat: 40.463667, lng: -3.74922},
+		zoom: 6
+	},
+	'se': {
+		center: {lat: 60.128161, lng: 18.643501},
+		zoom: 5
+	},
+	'ch': {
+		center: {lat: 46.818188, lng: 8.227512},
+		zoom: 7
+	},
+	'uk': {
+		center: {lat: 55.378051, lng: -3.435973},
+		zoom: 5
 	}
 };
 
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
-	  zoom: countries['de'].zoom,
-	  center: countries['de'].center,
+	  zoom: 4,
+	  center: {lat: 54.165691, lng: 10.451526},
 	  mapTypeControl: false,
 	  panControl: false,
 	  zoomControl: false,
