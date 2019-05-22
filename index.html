@@ -13,7 +13,64 @@
 </head>
 <body>
 
-	
+	<header class="container-fluid">
 
+		<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand" href="">Plan your next holiday in Europe</a>
+		</nav>
+
+	</header>
+
+
+	<section class="container-fluid">
+
+		<div>
+
+			<div class="heading">Country</div>
+
+			<select class="" id="country">
+				<option value="all" selected>All</option>
+				<option value="at">Austria</option>
+				<option value="cz">Czechia</option>
+				<option value="dk">Denmark</option>
+				<option value="fi">Finland</option>
+				<option value="fr">France</option>
+				<option value="de">Germany</option>
+				<option value="gr">Greece</option>
+				<option value="hu">Hungary</option>
+				<option value="ie">Ireland</option>
+				<option value="is">Iceland</option>
+				<option value="it">Italy</option>
+				<option value="nl">Netherlands</option>
+				<option value="no">Norway</option>
+				<option value="pl">Poland</option>
+				<option value="pt">Portugal</option>
+				<option value="sk">Slovakia</option>
+				<option value="es">Spain</option>
+				<option value="se">Sweden</option>
+				<option value="ch">Switzerland</option>
+				<option value="uk">United Kingdom</option>
+
+			</select>
+
+			<div>
+				<div class="heading">City</div>
+				<input type="text" id="autocomplete" placeholder="Enter a city">
+			</div>
+
+			<div>
+				<div class="heading">Filter:</div>
+
+				<form action="">
+					<input type="radio" value="accomodation"><span>Accommodation</span><br>
+					<input type="radio" value="tourist_attractions"><span>Tourist attractions</span><br>
+					<input type="radio" value="bars/restaurants"><span>Bars and restaurants</span><br>
+				</form>
+
+			</div>
+
+		</div>
+
+	</section>
 </body>
 </html>
