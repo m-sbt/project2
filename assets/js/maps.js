@@ -113,11 +113,30 @@ function initMap() {
 	places = new google.maps.places.PlacesService(map);
 
 	autocomplete.addListener('place_changed', onPlaceChanged);
-
+	
 	// Add a DOM event listener to react when the user selects a country.
-	document.getElementById('country').addEventListener(
-		'change', setAutocompleteCountry);
+	document.getElementById('country').addEventListener('change', setAutocompleteCountry);
+
+	// Radio button listeners
+	document.getElementById("acommodationFilter").addEventListener('change', onPlaceChanged);
+	document.getElementById("attractionsFilter").addEventListener('change', onPlaceChanged);
+	document.getElementById("foodFilter").addEventListener('change', onPlaceChanged);
   }
+
+// Checks which radio button is selected and returns an array with the desired place types
+function radioButtonChecked(){
+	var radioChecked = [];
+	if(document.getElementById("acommodationFilter").checked){
+		radioChecked = ['lodging'];
+	}
+	else if(document.getElementById("attractionsFilter").checked){
+		radioChecked = ['art_gallery', 'museum', 'park'];
+	}
+	else if(document.getElementById("foodFilter").checked){
+		radioChecked = ['restaurant', 'bar'];
+	}
+	return radioChecked;
+}
 
   // When the user selects a city, get the place details for the city and
   // zoom the map in on the city.
@@ -136,7 +155,7 @@ function initMap() {
   function search() {
 	var search = {
 	  bounds: map.getBounds(),
-	  types: ['lodging']
+	  types: radioButtonChecked()
 	};
 
 	places.nearbySearch(search, function(results, status) {
@@ -180,7 +199,7 @@ function initMap() {
 	var country = document.getElementById('country').value;
 	if (country == 'all') {
 	  autocomplete.setComponentRestrictions({'country': []});
-	  map.setCenter({lat: 53, lng: 9});
+	  map.setCenter({lat: 54.165691, lng: 10.451526});
 	  map.setZoom(4);
 	} else {
 	  autocomplete.setComponentRestrictions({'country': country});
