@@ -178,6 +178,7 @@ function radioButtonChecked(){
 		  markers[i].placeResult = results[i];
 		  google.maps.event.addListener(markers[i], 'click', showInfoWindow);
 		  setTimeout(dropMarker(i), i * 100);
+
 		  addResult(results[i], i);
 		}
 	  }
@@ -229,16 +230,30 @@ function radioButtonChecked(){
 
 	var iconTd = document.createElement('td');
 	var nameTd = document.createElement('td');
+	var ratingTd = document.createElement('td');
+
 	var icon = document.createElement('img');
 	icon.src = markerIcon;
 	icon.setAttribute('class', 'placeIcon');
 	icon.setAttribute('className', 'placeIcon');
+
 	var name = document.createTextNode(result.name);
+	if(result.rating != null){
+		var rating = document.createTextNode(result.rating + " (" + result.user_ratings_total + ")");
+	}
+	else{
+		var rating = document.createTextNode("-");
+	}
+
 	iconTd.appendChild(icon);
 	nameTd.appendChild(name);
+	ratingTd.appendChild(rating);
+
 	tr.appendChild(iconTd);
 	tr.appendChild(nameTd);
-	results.appendChild(tr);
+	tr.appendChild(ratingTd);
+
+	results.append(tr);
   }
 
   function clearResults() {

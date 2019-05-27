@@ -62,3 +62,7 @@ table {
 	height: 34px;
 	margin: 4px;
 }
+
+table tr td:nth-child(3) {
+	width: 200px;
+}
