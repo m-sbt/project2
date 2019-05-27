@@ -13,7 +13,7 @@
 </head>
 <body>
 
-	<header class="container-fluid">
+	<header class="container-fluid header-section">
 
 		<nav class="navbar navbar-light bg-light">
 			<a class="navbar-brand" href="">Plan your next holiday in Europe</a>
@@ -21,14 +21,14 @@
 
 	</header>
 
+<div class="row">
+	<section class="container-fluid col-xs-12 col-sm-12 col-md-4 col-lg-4 filters-section">
 
-	<section class="container-fluid">
-
-		<div>
+		<div class="selection">
 
 			<div class="heading">Country</div>
 
-			<div class="selection">
+			<div>
 				<select class="" id="country">
 					<option value="all" selected>All</option>
 					<option value="at">Austria</option>
@@ -74,9 +74,9 @@
 
 	</section>
 
-	<section class="container-fluid">
+	<section class="col-xs-12 col-sm-12 col-md-8 col-lg-8 map-section">
 
-			<div>
+			<div class="map-container">
 				<div id="map"></div>
 	
 				<div id="listing">
@@ -114,7 +114,7 @@
 			</div>
 			
 		</section>
-	
+</div>	
 		<footer class="container-fluid"></footer>
 		
 		<script src="assets/js/maps.js"></script>
