@@ -1,14 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body {
     width:100%;
-    overflow-x:hidden;
+	overflow-x:hidden;
+	font-family: 'Roboto', sans-serif;
 }
 
 /* Header */
 
 .header-section {
-	padding:0;
+	padding:0 0 15px 0;
 }
 
+.navbar-light {
+	background-color: #4e88ba !important;
+	height: 50px;
+	padding-top: 4px;
+	
+}
+
+.navbar-brand {
+	color: #ffffff !important;
+}
 /* Filters */
 
 .selection{
@@ -78,6 +91,19 @@ td:hover {
 	cursor:pointer;
 }
 
+/* footer */
+
+footer{
+	height: 50px;
+	background-color: #4e88ba;
+}
+
+/* makes the footer stay at the bottom of the page
+ (instead of having a block of empty space below it on larger screens until the results table is displayed) */
+.all-sections {
+	min-height: calc(100vh - 115px);
+}
+
 /* Media queries */
 @media(max-width:767px){
 	.map-container{
@@ -94,3 +120,4 @@ td:hover {
 		padding-left: 0;
 	}
 }
+
