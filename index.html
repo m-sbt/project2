@@ -29,11 +29,10 @@
 
 		<div class="selection">
 
-			<div class="heading">Country</div>
-
-			<div>
+			<div class="selection-country">
 				<select class="" id="country">
-					<option value="all" selected>All</option>
+					<option value="" disabled selected>Pick a country</option>
+					<option value="all" >All</option>
 					<option value="at">Austria</option>
 					<option value="cz">Czechia</option>
 					<option value="dk">Denmark</option>
@@ -57,18 +56,17 @@
 				</select>
 			</div>
 
-			<div>
-				<div class="heading">City</div>
+			<div class="selection-city">
 				<input type="text" id="autocomplete" placeholder="Enter a city">
 			</div>
-			<br>
-			<div>
+
+			<div class="selection-filters">
 				<div class="heading">Filter:</div>
 
 				<form action="">
 					<label><input type="radio" name="filter" value="accomodation" id="acommodationFilter" checked><span>Accommodation</span></label><br>
 					<label><input type="radio" name="filter" value="tourist_attractions" id="attractionsFilter"><span>Tourist attractions</span></label><br>
-					<label><input type="radio" name="filter" value="bars/restaurants" id="foodFilter"><span>Bars and restaurants</span></labe><br>
+					<label><input type="radio" name="filter" value="bars/restaurants" id="foodFilter"><span>Bars and restaurants</span></label><br>
 				</form>
 
 			</div>
@@ -83,7 +81,7 @@
 				<div id="map"></div>
 			</div>
 			
-			<div style="display: none">
+			<div class="pop-up">
 				<div id="info-content">
 				<table>
 					<tr id="iw-url-row" class="iw_table_row">

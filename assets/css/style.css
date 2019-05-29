@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Montserrat:400:500:600:700&display=swap');
 
 body {
     width:100%;
@@ -6,7 +6,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
-/* Header */
+/***** Header *****/
 
 .header-section {
 	padding:0 0 15px 0;
@@ -21,23 +21,56 @@ body {
 
 .navbar-brand {
 	color: #ffffff !important;
+	text-transform: uppercase;
+	font-family: 'Montserrat';
+	font-weight: 700;
 }
-/* Filters */
+/***** Selection / Filters *****/
 
+/* container for selection and filters */
 .selection{
 	padding: 0 15px 15px 15px;
 }
 
-#autocomplete {
+/* country selection and city fields */
+#country, #autocomplete {
 	width: 100%;
 }
 
-#country {
-	width: 100%;
+/* country selection */
+select{
+	height: 30px;
+	color: #7a7a7f;
+}
+	select option {
+		color: black; 
+	}
+	option[value=""][disabled] {
+		display: none;
+		color: rgb(134, 134, 134);
+	}
+
+.selection-city{
+	padding: 15px 0 15px 0;
 }
 
+/* filter header */
+.heading {
+	padding-left: 2px;
+	font-family: 'Montserrat';
+	font-size: 17px;
+}
+
+/* radio buttons and text container */
 label{
 	margin: 0;
+	padding: 3px 0 0 2px;
+}
+
+/* text next to radio buttons */
+label > span {
+	padding-left: 5px;
+	font-size: 15px;
 }
 
 /* Map */
@@ -48,6 +81,10 @@ label{
 }
 
 /* Map pop-up */
+
+.pop-up{
+	display: none;
+}
 
 .hotelIcon {
 	width: 50px;
