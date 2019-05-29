@@ -25,7 +25,7 @@
 	</header>
 
 <div class="row all-sections">
-	<section class="container-fluid col-xs-12 col-sm-12 col-md-4 col-lg-4 filters-section">
+	<section class="container-fluid col-xs-12 col-sm-12 col-md-4 col-lg-4 filters-section" id="results-large-screen">
 
 		<div class="selection">
 
@@ -109,9 +109,9 @@
 			</div>
 			
 		</section>
-		<section class="container-fluid">
+		<section class="container-fluid results-section" id="results-small-screen">
 
-				<div id="listing">
+				<div id="results-container">
 					<table id="resultsTable">
 						<tbody id="results"></tbody>
 					</table>
@@ -125,5 +125,16 @@
 		<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLf09oL79y57j6kVWiX8oHAEeWD-_CKcE&libraries=places&callback=initMap">
 		</script>
+
+<script>
+		window.addEventListener('resize', function(event){
+			if (window.innerWidth > 991) {
+				document.getElementById('results-large-screen').appendChild(document.getElementById('results-container') )
+			}
+			else{
+				document.getElementById('results-small-screen').appendChild(document.getElementById('results-container') )
+			}
+		});
+	</script>
 </body>
 </html>

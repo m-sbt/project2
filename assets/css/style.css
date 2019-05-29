@@ -106,7 +106,7 @@ label > span {
 
 /* Results table */
 
-#listing {
+#results-container {
 	padding: 15px 15px 15px 15px;
 }
 
@@ -158,3 +158,14 @@ footer{
 	}
 }
 
+@media(min-width:992px){
+	#results-container{
+		padding-top: 0;
+		padding-right: 0;
+		overflow: auto;
+		height: calc(100vh - 340px);
+	}
+	#map {
+		height: calc(100vh - 130px);
+	}
+}
