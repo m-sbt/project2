@@ -119,7 +119,9 @@
 				
 		</section>
 </div>	
-		<footer class="container-fluid"></footer>
+		<footer class="container-fluid text-center">
+			<a href="https://github.com/m-sbt/project2"><i class="fab fa-github"></i></a>
+		</footer>
 		
 		<script src="assets/js/maps.js"></script>
 		<script async defer
@@ -127,14 +129,16 @@
 		</script>
 
 <script>
-		window.addEventListener('resize', function(event){
+		function resultsLocation(){
 			if (window.innerWidth > 991) {
 				document.getElementById('results-large-screen').appendChild(document.getElementById('results-container') )
 			}
 			else{
 				document.getElementById('results-small-screen').appendChild(document.getElementById('results-container') )
 			}
-		});
+		}
+		resultsLocation();
+		window.addEventListener('resize',resultsLocation);
 	</script>
 </body>
 </html>
