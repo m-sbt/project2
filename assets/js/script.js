@@ -8,3 +8,11 @@ function resultsLocation(){
 }
 resultsLocation();
 window.addEventListener('resize',resultsLocation);
+
+country.addEventListener('change', function (e) {
+    var selectedValue = country.options[country.selectedIndex];
+
+    if (selectedValue != 0) {
+        document.getElementById("country").style.color = "black"; 
+    }
+});
