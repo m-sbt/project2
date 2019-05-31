@@ -279,7 +279,7 @@ function radioButtonChecked(){
 
   // Load the place information into the HTML elements used by the info window.
   function buildIWContent(place) {
-	document.getElementById('iw-icon').innerHTML = '<img class="hotelIcon" ' +
+	document.getElementById('iw-icon').innerHTML = '<img class="pop-upIcon" ' +
 		'src="' + place.icon + '"/>';
 	document.getElementById('iw-url').innerHTML = '<b><a href="' + place.url +
 		'">' + place.name + '</a></b>';

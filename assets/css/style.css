@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Montserrat:400:500:600:700&display=swap');
 
-body {
+html, body {
     width:100%;
 	overflow-x:hidden;
+}
+
+body{
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -24,7 +27,34 @@ body {
 	text-transform: uppercase;
 	font-family: 'Montserrat';
 	font-weight: 700;
+
+	/* disables text selection */
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
+
+/* plane animation */
+.slide-right {
+	animation: slide-right 6s both;
+	animation-delay: 2s;
+}
+
+ @keyframes slide-right {
+	50% {
+	  transform: translateX(100vw);
+	}
+	60% {
+		opacity: 0;
+		transform: translateX(0);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+  
 /***** Selection / Filters *****/
 
 /* container for selection and filters */
@@ -50,6 +80,7 @@ select{
 		color: rgb(134, 134, 134);
 	}
 
+/* container for the input field */
 .selection-city{
 	padding: 15px 0 15px 0;
 }
@@ -73,7 +104,7 @@ label > span {
 	font-size: 15px;
 }
 
-/* Map */
+/***** Map *****/
 
 #map {
 	height: 600px;
@@ -86,7 +117,7 @@ label > span {
 	display: none;
 }
 
-.hotelIcon {
+.pop-upIcon {
 	width: 50px;
 	height: 50px;
 }
